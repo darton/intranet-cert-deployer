@@ -36,8 +36,8 @@ Designed specifically for servers in **internal intranet environments** that lac
    ISPC_User ?= "remoteuser"
    ISPC_Password ?= "remotepass"
    ISPC_Api ?= "https://ispconfig.example.com:8080/remote/json.php"
-  ISPC_Api_Insecure ?= 0
-  ```
+   ISPC_Api_Insecure ?= 0
+   ```
 
 3. Use command
    ```bash
