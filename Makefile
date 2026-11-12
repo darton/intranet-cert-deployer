@@ -50,7 +50,7 @@ help:
 	@echo "  make renew       - Wymusza odnowienie certyfikatu i wdrożenie go"
 	@echo "  make check       - Sprawdza poprawność konfiguracji serwera WWW i PHP-FPM"
 
-get:
+setup:
 	@echo "[+] Pobieranie i instalacja acme.sh dla $(EMAIL)"
 	curl https://get.acme.sh |sh -s email=$(EMAIL)
 
@@ -70,7 +70,6 @@ install:
                 --fullchain-file  $(CERT_DIR)/$(DOMAIN)-fullchain.crt \
                 --reloadcmd       "systemctl reload $(WEB_SERVICE)"
 	@echo "[+] Instalacja powiązana."
-
 
 php-fpm:
 	@echo "[+] Generowanie konfiguracji PHP-FPM dla $(DOMAIN)..."
