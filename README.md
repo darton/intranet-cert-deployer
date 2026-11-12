@@ -22,7 +22,7 @@ Designed specifically for servers in **internal intranet environments** that lac
 
 1. Clone the repository to your server:
    ```bash
-   git clone [https://github.com/darton/intranet-cert-deployer.git](https://github.com/darton/intranet-cert-deployer.git) /opt/intranet-cert-deployer
+   git clone https://github.com/darton/intranet-cert-deployer.git /opt/intranet-cert-deployer
    cd /opt/intranet-cert-deployer
    ```
 2. Edit Makefile and set:
