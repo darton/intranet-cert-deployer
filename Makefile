@@ -99,7 +99,7 @@ vhost: php-fpm
 	sed -i 's|PHP_SOCKET_PLACEHOLDER|$(PHP_SOCKET)|g' $(CONF_FILE)
 	sudo mv vhost.tmp $(CONF_FILE)
 	sudo chmod 644 $(CONF_FILE)
-	@echo "[+] Konfiguracja dla vhosta gotowq."
+	@echo "[+] Konfiguracja dla vhosta jest gotowa."
 	$(MAKE) check
 
 deploy: issue install vhost
