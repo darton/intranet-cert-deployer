@@ -27,17 +27,17 @@ Designed specifically for servers in **internal intranet environments** that lac
    ```
 2. Edit Makefile and set:
 
-```
-# --- CONFIG ---
-DOMAIN ?= www.example.com
-EMAIL ?= hostmaster@example.com
+   ```
+   # --- CONFIG ---
+   DOMAIN ?= www.example.com
+   EMAIL ?= hostmaster@example.com
 
-#ISPCONFIG
-ISPC_User ?= "remoteuser"
-ISPC_Password ?= "remotepass"
-ISPC_Api ?= "https://ispconfig.example.com:8080/remote/json.php"
-ISPC_Api_Insecure ?= 0
-```
+   #ISPCONFIG
+   ISPC_User ?= "remoteuser"
+   ISPC_Password ?= "remotepass"
+   ISPC_Api ?= "https://ispconfig.example.com:8080/remote/json.php"
+  ISPC_Api_Insecure ?= 0
+  ```
 
 3. Use command
    ```bash
