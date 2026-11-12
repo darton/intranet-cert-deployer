@@ -24,3 +24,17 @@ Designed specifically for servers in **internal intranet environments** that lac
    ```bash
    git clone [https://github.com/darton/intranet-cert-deployer.git](https://github.com/darton/intranet-cert-deployer.git) /opt/intranet-cert-deployer
    cd /opt/intranet-cert-deployer
+   ```
+2. Use command
+   ```bash
+   # make
+Dostępne komendy:
+  make setup       - Pobiera i instaluje acme.sh dla hostmaster@example.com
+  make issue       - Wystawia nowy certyfikat przez acme.sh (DNS-01)
+  make install     - Konfiguruje acme.sh do automatycznej instalacji certyfikatu
+  make php-fpm     - Generuje plik konfiguracyjny PHP-FPM dla www.example.com
+  make vhost       - Generuje plik konfiguracyjny Apache z szablonu dla www.example.com
+  make deploy      - Wykonuje pełną konfigurację krok po kroku (issue -> install -> php-fpm -> vhost)
+  make renew       - Wymusza odnowienie certyfikatu i wdrożenie go
+  make check       - Sprawdza poprawność konfiguracji serwera WWW i PHP-FPM
+```
