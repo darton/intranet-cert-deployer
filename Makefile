@@ -115,4 +115,4 @@ check:
 	@echo "[+] Checking PHP-FPM configuration validity..."
 	php-fpm -t
 	@echo "[+] Checking $(WEB_SERVICE) web server configuration..."
-	sudo httpd -t
+	sudo $(WEB_SERVICE) -t
