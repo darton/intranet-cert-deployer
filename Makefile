@@ -90,12 +90,12 @@ vhost: php-fpm
 	sudo install -d -m 755 -o $(APP_USER) -g $(APP_GROUP) $(APP_ROOT)/var/sessions
 	sudo install -d -m 755 -o $(APP_USER) -g $(APP_GROUP) $(APP_ROOT)/var/tmp
 	@echo "[+] Generating vhost from vhost.template template..."
-	cp vhost.template $(CONF_FILE)
-	sed -i 's|DOMAIN_PLACEHOLDER/$(DOMAIN)|g' $(CONF_FILE)
-	sed -i 's|WEB_ROOT_PLACEHOLDER|$(WEB_ROOT)|g' $(CONF_FILE)
-	sed -i 's|CERT_DIR_PLACEHOLDER|$(CERT_DIR)|g' $(CONF_FILE)
-	sed -i 's|KEY_DIR_PLACEHOLDER|$(KEY_DIR)|g' $(CONF_FILE)
-	sed -i 's|PHP_SOCKET_PLACEHOLDER|$(PHP_SOCKET)|g' $(CONF_FILE)
+	cp vhost.template vhost.tmp
+	sed -i 's|DOMAIN_PLACEHOLDER|$(DOMAIN)|g' vhost.tmp
+	sed -i 's|WEB_ROOT_PLACEHOLDER|$(WEB_ROOT)|g' vhost.tmp
+	sed -i 's|CERT_DIR_PLACEHOLDER|$(CERT_DIR)|g' vhost.tmp
+	sed -i 's|KEY_DIR_PLACEHOLDER|$(KEY_DIR)|g' vhost.tmp
+	sed -i 's|PHP_SOCKET_PLACEHOLDER|$(PHP_SOCKET)|g' vhost.tmp
 	sudo mv vhost.tmp $(CONF_FILE)
 	sudo chmod 644 $(CONF_FILE)
 	@echo "[+] Vhost configuration is ready."
