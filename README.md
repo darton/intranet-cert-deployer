@@ -38,15 +38,15 @@ Designed specifically for servers in **internal intranet environments** that lac
    ISPC_Api_Insecure ?= 0
    ```
 3. Use command
-   ```bash
+   ```
    # make
-   Dostępne komendy:
-      make setup       - Pobiera i instaluje acme.sh dla hostmaster@example.com
-      make issue       - Wystawia nowy certyfikat przez acme.sh (DNS-01)
-      make install     - Konfiguruje acme.sh do automatycznej instalacji certyfikatu
-      make php-fpm     - Generuje plik konfiguracyjny PHP-FPM dla www.example.com
-      make vhost       - Generuje plik konfiguracyjny Apache z szablonu dla www.example.com
-      make deploy      - Wykonuje pełną konfigurację krok po kroku (issue -> install -> php-fpm -> vhost)
-      make renew       - Wymusza odnowienie certyfikatu i wdrożenie go
-      make check       - Sprawdza poprawność konfiguracji serwera WWW i PHP-FPM
+   Available commands:
+      make setup       - Downloads and installs acme.sh for hostmaster@example.com
+      make issue       - Issues a new certificate via acme.sh (DNS-01)
+      make install     - Configures acme.sh for automatic certificate installation
+      make php-fpm     - Generates the PHP-FPM configuration file for www.example.com
+      make vhost       - Generates the Apache configuration file from a template for www.example.com
+      make deploy      - Performs full step-by-step configuration (issue -> install -> php-fpm -> vhost)
+      make renew       - Forces certificate renewal and deployment
+      make check       - Checks the validity of the web server and PHP-FPM configuration
    ```
