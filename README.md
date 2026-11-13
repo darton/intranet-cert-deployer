@@ -25,8 +25,7 @@ Designed specifically for servers in **internal intranet environments** that lac
    git clone https://github.com/darton/intranet-cert-deployer.git /opt/intranet-cert-deployer
    cd /opt/intranet-cert-deployer
    ```
-2. Edit Makefile and set:
-
+2. Edit the Makefile and set the credentials created in the ISPConfig Control Panel. The Remote User must have access to at least the DNS Zone, DNS TXT, and Client functions:
    ```
    # --- CONFIG ---
    DOMAIN ?= www.example.com
@@ -38,7 +37,6 @@ Designed specifically for servers in **internal intranet environments** that lac
    ISPC_Api ?= "https://ispconfig.example.com:8080/remote/json.php"
    ISPC_Api_Insecure ?= 0
    ```
-
 3. Use command
    ```bash
    # make
