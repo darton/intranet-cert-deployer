@@ -57,9 +57,9 @@ setup:
 issue:
 	@echo "[+] Issuing certificate for $(DOMAIN) using Let's Encrypt and the $(DNS_PLUGIN) plugin..."
 	ISPC_User=$(ISPC_User) ISPC_Password=$(ISPC_Password) ISPC_Api=$(ISPC_Api) ISPC_Api_Insecure=$(ISPC_Api_Insecure) \
-                $(ACME_SH) --set-default-ca --server letsencrypt
+    			$(ACME_SH) --set-default-ca --server letsencrypt
 	ISPC_User=$(ISPC_User) ISPC_Password=$(ISPC_Password) ISPC_Api=$(ISPC_Api) ISPC_Api_Insecure=$(ISPC_Api_Insecure) \
-                $(ACME_SH) --issue --dns $(DNS_PLUGIN) -d $(DOMAIN) --dnssleep $(DNS_SLEEP)
+    			$(ACME_SH) --issue --dns $(DNS_PLUGIN) -d $(DOMAIN) --dnssleep $(DNS_SLEEP)
 	@echo "[+] Certificate successfully issued."
 
 install:
