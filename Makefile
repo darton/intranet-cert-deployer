@@ -37,7 +37,7 @@ PHP_SOCKET ?= /run/php-fpm/$(DOMAIN).sock
 
 # --------------------
 
-.PHONY: help get issue install vhost setup renew check
+.PHONY: help setup issue install php-fpm vhost deploy renew check
 
 help:
 	@echo "Available commands:"
